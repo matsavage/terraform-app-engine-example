@@ -14,8 +14,8 @@ deploy: src/requirements.txt
 tf-init: auth
 	terraform -chdir=terraform init
 
-tf-apply:
+tf-apply: src/requirements.txt
 	terraform -chdir=terraform apply
 
-tf-apply-auto:
+tf-apply-auto: src/requirements.txt
 	terraform -chdir=terraform apply -auto-approve  
