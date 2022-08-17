@@ -5,9 +5,6 @@ src/requirements.txt: pyproject.toml  poetry.lock
 auth:
 	gcloud auth application-default login
 
-tf-init: auth
-	terraform -chdir terraform init
-
 deploy: src/requirements.txt
 	gcloud app deploy src
 
